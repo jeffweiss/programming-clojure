@@ -6,6 +6,8 @@
 (defn hello-world [username]
 	(println (format "Hello, %s" username)))
 
+(def fibs (lazy-cat [0 1] (map + fibs (rest fibs))))
+
 (def visitors (atom #{}))
 
 (defn hello
